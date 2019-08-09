@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlackJack </title>
+  <link rel="stylesheet" href="blackjack.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<header>
+  <h1>Blackjack</<h1>
+</header>
+
+<div id="earnings"></div>
+<div id="credit">
+  Total : $1000
+</div>
+<div id="deck">( 1 deck of cards )</div>
+<div id="startdiv">
+<form class="bet">
+  Bet Amount:
+  <input type="number" value="10" name="bet" min="10" step="10" id="betamount">
+</form>
+
+<div id="makenone">
+<button id="button" onclick="game()">Play!</button></div>
+</div>
+
+
+
+<div id="result"></div>
+
+
+<div id="dealer">Dealer's Hand:</div>
+
+<div id="dealerhand"></div>
+
+<div id="player">Your hand: </div>
+
+<div id="playerhand"></div>
+
+
+<div id="choices">
+<div class="choice" id="h">Hit</div>
+<div class="choice" id="s">Stand</div>
+<div class="choice" id="d">Double</div>
+</div>
+
+
+<script src = "blackjack.js" charset="utf-8"></script>
+</body>
+
+
+</html>
