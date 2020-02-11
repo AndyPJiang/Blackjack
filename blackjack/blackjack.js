@@ -8,7 +8,11 @@ const hit_card = document.getElementById('h');
 const stand_card = document.getElementById('s');
 const double_card = document.getElementById('d');
 
-deck = create_deck();
+deck1 = create_deck();
+deck2 = create_deck();
+deck3 = create_deck();
+deck4 = create_deck();
+deck = deck1.concat(deck2).concat(deck3).concat(deck4);
 
 hit_card.addEventListener("click",function(){
   hit();
@@ -54,10 +58,10 @@ function create_deck(){
 
       const suits = ['hearts', 'spades', 'clubs', 'diamonds'];
       const values = ['ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'jack', 'queen', 'king'];
-
       for (let suit in suits) {
         for (let value in values) {
           this.deck.push(`${values[value]}_of_${suits[suit]}`);
+
         }
       }
     }
@@ -264,7 +268,6 @@ function double(){
 
 }, 1000)
 
-
 }
 
 function game(){
@@ -282,6 +285,9 @@ function game(){
     alert("Deck has run out, please refresh!");
     return false;
   }
+
+
+  console.log(deck);
 
   document.getElementById('playerhand').innerHTML = "";
   document.getElementById('dealerhand').innerHTML = "";
